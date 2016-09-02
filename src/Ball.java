@@ -1,6 +1,5 @@
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Rectangle;
 
 public class Ball  {
 	Image image;
@@ -8,32 +7,37 @@ public class Ball  {
 	private int height = 30;
 	protected int x = 130;
 	protected int y = 320;
+	
+	private int xSpeed = 0; //can cause problems!!!!!
+	private int ySpeed = 0;//!!!!
 
-	public Ball() {
-		this.image = image;
-	}
-	protected void setDimensions(int width, int height){
+	public void setDimensions(int width, int height){
 		this.width = width;
 		this.height = height;
 	}
-	protected int getBallWidth(){
+	public int getBallWidth(){
 		return width;
 	}
-	protected int getBallHeight(){
+	public int getBallHeight(){
 		return height;
+	}
+	public void setSpeed(int xSpeed, int ySpeed){
+		this.xSpeed = xSpeed;
+		this.ySpeed = ySpeed;
 	}
 
 	
 	public void draw(Graphics g) {
 		g.drawImage(image, x, y, width, height,null);
 	}
-    public Coordinates getCoordiantes() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    public void invertVerticalSpeed() {
-        // TODO Auto-generated method stub
-        
-    }
+   
+   
+	  public void invertVerticalSpeed() {
+	    	ySpeed *= -1;
+	        
+	    }
+	    public void invertHorizontalSpeed() {
+	    	xSpeed *= -1;
+	    }
 
 }

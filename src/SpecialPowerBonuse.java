@@ -1,8 +1,6 @@
 import java.awt.Graphics;
-import java.awt.Image;
 
-public class Brick {
-	Image image;
+public class SpecialPowerBonuse extends Bonus {
 	private int width = 60;
 	private int height = 30;
 	private int x = 0;
@@ -12,30 +10,29 @@ public class Brick {
 		this.width = width;
 		this.height = height;
 	}
-	public void setBrickX(int x){
+	public void setSpecialPowerBonusX(int x){
 		this.x = x;
 	}
-	public void setBrickY(int y) {
+	public void setSpecialPowerBonusY(int y) {
 		this.y = y;
 		
 	}
-	public int getBrickX(){
+	public int getSpecialPowerBonusX(){
 		return x;
 	}
-	public int getBrickY(){
+	public int getSpecialPowerBonusY(){
 		return y;
 	}
 
-	protected int getBrickWidth() {
+	protected int getSpecialPowerBonusWidth() {
 		return width;
 	}
 
-	protected int getBrickHeight() {
+	protected int getSpecialPowerBonusHeight() {
 		return height;
 	}
 
 	public void draw(Graphics g) {
-		g.drawImage(image, x, y, width, height, null);
 	}
 	
 
